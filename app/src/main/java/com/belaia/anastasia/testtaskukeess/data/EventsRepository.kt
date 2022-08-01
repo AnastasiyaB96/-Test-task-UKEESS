@@ -9,11 +9,10 @@ object EventsRepository {
         val rawData = sampleData
         val mapper = ObjectMapper(JsonFactory())
         val personArray = mapper.readValue(rawData, Array<PersonModel>::class.java)
-        Log.d("Parser123", personArray.toList().toString())
         return personArray.toList()
     }
 
-    val sampleData = "[" +
+    private const val sampleData = "[" +
             "{" +
             "\"_id\": \"60c8a132f23a34c116457370\"," +
             "\"name\": \"Audrey Gross\"," +

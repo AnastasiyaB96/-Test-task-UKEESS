@@ -3,39 +3,75 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:layout_marginBottom="20dp"
+    android:background="@color/grey">
 
     <TextView
         android:id="@+id/nameTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/bottom_padding"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@id/genderTV"
+        app:layout_constraintBottom_toTopOf="@id/pictureIV"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Berger Hebert" />
+
+    <ImageView
+        android:id="@+id/pictureIV"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:paddingBottom="@dimen/bottom_padding"
+        app:layout_constraintBottom_toTopOf="@id/genderTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nameTV" />
 
     <TextView
         android:id="@+id/genderTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/bottom_padding"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@id/aboutTV"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/nameTV"
+        app:layout_constraintTop_toBottomOf="@id/pictureIV"
         tools:text="male" />
-
 
     <TextView
         android:id="@+id/aboutTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/bottom_padding"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/genderTV"
         tools:text="Minim culpa veniam amet cillum. Laboris sint dolor ullamco exercitation occaecat esse laboris voluptate voluptate ut sint veniam
 reprehenderit. Commodo anim exercitation commodo in enim fugiat cillum enim officia id officia dolor. Commodo dolore do nulla quis voluptate
 reprehenderit." />
+
+    <TextView
+        android:id="@+id/birthTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/bottom_padding"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/deathTV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/aboutTV"
+        tools:text="birth data: 1953-03-07T01:04:08 -02:00 \n birth location: Azerbaijan, Needmore" />
+
+    <TextView
+        android:id="@+id/deathTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/birthTV"
+        tools:text="death data: 1953-03-07T01:04:08 -02:00 \n death location: Azerbaijan, Needmore" />
 </androidx.constraintlayout.widget.ConstraintLayout>
